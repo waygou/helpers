@@ -10,7 +10,7 @@ class ServiceProvider extends BaseServiceProvider
     public function boot()
     {
         // MySQL? Load the default string length to 191 chars.
-        if (config('database.connections.' . config('database.default') . '.driver') == 'mysql') {
+        if (config('database.connections.'.config('database.default').'.driver') == 'mysql') {
             Schema::defaultStringLength(191);
         }
     }
