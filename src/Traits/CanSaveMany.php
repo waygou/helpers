@@ -36,6 +36,6 @@ trait CanSaveMany
             $models[] = $model;
         }
 
-        return $models;
+        return collect($models);
     }
 }
