@@ -19,7 +19,7 @@ trait CanSaveMany
     {
         $models = [];
 
-        if (!is_array($datasets)) {
+        if (! is_array($datasets)) {
             $datasets = [$datasets];
         }
 
