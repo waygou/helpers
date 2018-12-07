@@ -2,48 +2,52 @@
 
 namespace Waygou\Helpers;
 
-use \Exception;
+use Exception;
 
 class PseudoRandomModel
 {
-    function __construct()
+    public function __construct()
     {
     }
 
-    static function new(...$args)
+    public static function new(...$args)
     {
         return new self(...$args);
     }
 
-    function with($model)
+    public function with($model)
     {
-        if (!class_exists($model)) {
+        if (! class_exists($model)) {
             throw new Exception('Model class don\'t exist! Please check the model namespace/class name.');
         }
 
         $this->model = $model;
+
         return $this;
     }
 
-    function min($min)
+    public function min($min)
     {
         $this->min = $min;
+
         return $this;
     }
 
-    function except(array $values)
+    public function except(array $values)
     {
         $this->except = $values;
+
         return $this;
     }
 
-    function max($max)
+    public function max($max)
     {
         $this->max = $max;
+
         return $this;
     }
 
-    function random()
+    public function random()
     {
         $model = app()->make($this->model);
 
