@@ -14,5 +14,5 @@ use Illuminate\Support\Collection;
  * @return Illuminate\Support\Collection
  */
 Collection::macro('addAt', function ($mixed, int $index = null): Collection {
-    return !is_null($index) ? $this->splice($index, 0, [$mixed]) : $this->push($mixed);
+    return ! is_null($index) ? $this->splice($index, 0, [$mixed]) : $this->push($mixed);
 });
