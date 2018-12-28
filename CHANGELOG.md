@@ -2,7 +2,8 @@
 
 ## New features
 - [x] Repository created.
-- MySQL default string length is now 191 characters.
+- [x] MySQL default string length is now 191 characters.
+- [x] Random Model feature created.
 
 ### Enhancements
 - None.
